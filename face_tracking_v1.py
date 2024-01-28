@@ -6,22 +6,22 @@ import time
 from sys import exit
 
 clasificador_caras  = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-cap = cv2.VideoCapture("/home/lau/Descargas/test.mp4") # your cam(0 or 1) or the directory of the video,
-ws, hs = 1280, 720                                     # for example: /home/USER/Downloads/test.mp4
+cap = cv2.VideoCapture(0) # tu cam(0 or 1) o el directorio del video, por ejemplo: /home/USER/Downloads/test.mp4
+ws, hs = 1280, 720                                    
 cap.set(3, ws)
 cap.set(4, hs)
 detector = FaceDetector()
 
 # connection with arduino
-port = "/dev/ttyACM0" # the directory of the port
+port = "/dev/ttyACM0" # el directorio del puerto
 board = pyfirmata.Arduino(port)
 time.sleep(3)
 servo_axisX = board.get_pin('d:9:s') #pin 9 Arduino
 servo_axisY = board.get_pin('d:10:s') #pin 10 Arduino
-servoPos = [90, 90] # initial servo position
+servoPos = [90, 90] # posicion inicial de los servos
 
 if not cap.isOpened():
-    print("camera not available, maybe you should check that you have installed all the corresponding camera modules and drivers")
+    print("La cámara no está disponible, tal vez deberías verificar que hayas instalado todos los módulos y controladores de cámara correspondientes.")
     exit()
 else:
     while True:
@@ -29,10 +29,8 @@ else:
         img, bboxs = detector.findFaces(img, draw=False)
     
         if bboxs:
-            #get the coordinate
             fx, fy = bboxs[0]["center"][0], bboxs[0]["center"][1]
             pos = [fx, fy]
-            #convert coordinat to servo degree
             servoX = np.interp(fx, [0, ws], [0, 180])
             servoY = np.interp(fy, [0, hs], [0, 180])
     
