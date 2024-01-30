@@ -44,4 +44,5 @@ FUNCIONAMIENTO
 			Los diseños fueron hechos con la medida standar del sg90, presente en la hoja de datos del mismo, fue construido con una impresora 3D, con base en el material PETG
 
 Conclusiones
-	Mis expectativas del proyecto fueron cumplidas con creces, gracias a la implementacion de OpenCV, logre aprender el funcionamiento de este programa e incluso de Inteligencia Artificial
+	Mis expectativas del proyecto fueron cumplidas con creces, gracias a la implementacion de OpenCV y PyFirmata, logre aprender el funcionamiento de este programa e incluso de Inteligencia Artificial y comunicacion entre computadora y Arduino, sin olvidarme del aprendizaje adquirido sobre python, ya que c y c++ son mis especialidades. 
+ 
