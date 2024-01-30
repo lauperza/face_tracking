@@ -49,7 +49,7 @@ Conclusiones
 Como Contribuir:
     Realiza una bifurcación (fork) de este repositorio y clona tu propia versión localmente en tu máquina.
 
-    Lleva a cabo las mejoras y cambios en tu rama personal, ya sea para sugerir soluciones o aportar nuevas ideas al proyecto.
+Lleva a cabo las mejoras y cambios en tu rama personal, ya sea para sugerir soluciones o aportar nuevas ideas al proyecto.
 
     Asegúrate de actualizar la documentación, añadiendo detalles sobre tus contribuciones para una mayor comprensión.
 
