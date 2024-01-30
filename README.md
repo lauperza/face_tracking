@@ -38,11 +38,22 @@ FUNCIONAMIENTO
 	MODELOS 3D
 		La elección de SolidWorks 2023 es debido a mis conocimientos intermedios en este mismo, ademas de ser una de las herramientas de diseño asistido por computadora (CAD) más            avanzadas y ampliamente utilizadas. Esto asegura la precisión y la eficiencia en el diseño del robot.
 
-    El diseño consta de tres partes principales: superior, intermedia e inferior. La parte inferior sirve como la base del robot y permite la rotacion. Esta base proporciona 						estabilidad al conjunto del robot. La parte intermedia sive como estructura principal del robot, manteniendo todo en su lugar, y sirviendo como referencia para la parte superior, 			que gracias a un servomotor, permite el movimiento vertical en respuesta a las ordenes del programa
+    El diseño consta de tres partes principales: superior, intermedia e inferior. La parte inferior sirve como la base del robot y permite la rotacion. Esta base proporciona 						estabilidad al conjunto del robot. La parte intermedia sive como estructura principal del robot, manteniendo todo en su lugar, y sirviendo como referencia para la parte superior, 			que gracias a un servomotor, permite el movimiento vertical en respuesta a las ordenes del programa.
 
 		Criterios de diseño:
-			Los diseños fueron hechos con la medida standar del sg90, presente en la hoja de datos del mismo, fue construido con una impresora 3D, con base en el material PETG
+			Los diseños fueron hechos con la medida standard del sg90, presente en la hoja de datos del mismo, fue construido con una impresora 3D, con base en el material PETG.
 
 Conclusiones
-	Mis expectativas del proyecto fueron cumplidas con creces, gracias a la implementacion de OpenCV y PyFirmata, logre aprender el funcionamiento de este programa e incluso de Inteligencia Artificial y comunicacion entre computadora y Arduino, sin olvidarme del aprendizaje adquirido sobre python, ya que c y c++ son mis especialidades. 
- 
+	Mis expectativas del proyecto fueron cumplidas con creces, gracias a la implementacion de OpenCV y PyFirmata, logre aprender el funcionamiento de este programa e incluso de Inteligencia Artificial y comunicacion entre computadora y Arduino, sin olvidarme del aprendizaje adquirido sobre python, ya que c y c++ son mis especialidades. Sin embargo, soy conciente de que tiene muchas mejoras.
+
+Como Contribuir:
+    Realiza una bifurcación (fork) de este repositorio y clona tu propia versión localmente en tu máquina.
+
+    Lleva a cabo las mejoras y cambios en tu rama personal, ya sea para sugerir soluciones o aportar nuevas ideas al proyecto.
+
+    Asegúrate de actualizar la documentación, añadiendo detalles sobre tus contribuciones para una mayor comprensión.
+
+    Crea una solicitud de extracción (pull request) hacia nuestra rama principal, permitiendo así que revisemos y consideremos tus contribuciones.
+
+MUCHAS GRACIAS.
+
