@@ -18,7 +18,7 @@ board = pyfirmata.Arduino(port)
 time.sleep(3)
 servo_axisX = board.get_pin('d:9:s') #pin 9 Arduino
 servo_axisY = board.get_pin('d:10:s') #pin 10 Arduino
-servoPos = [90, 90] # posicion inicial de los servos
+servo_pos = [90, 90] # posicion inicial de los servos
 
 if not cap.isOpened():
     print("La cámara no está disponible, tal vez deberías verificar que hayas instalado todos los módulos y controladores de cámara correspondientes.")
@@ -43,8 +43,8 @@ else:
             elif servoY > 180:
                 servoY = 180
     
-            servoPos[0] = servoX
-            servoPos[1] = servoY
+            servo_pos[0] = servoX
+            servo_pos[1] = servoY
     
     
             cv2.circle(img, (fx, fy), 120, (0, 0, 255), 2)
@@ -60,8 +60,8 @@ else:
         cv2.putText(img, f'Servo Y: {int(servoPos[1])} grados', (900, 680), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 191, 0), 2)
         cv2.putText(img, 'si desea terminar el seguimiento,',  (50, 50), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 191, 0), 2)
         cv2.putText(img, 'por favor, presione "Q"',  (50, 100), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 191, 0), 2)        
-        servo_axisX.write(servoPos[0])
-        servo_axisY.write(servoPos[1])
+        servo_axisX.write(servo_pos[0])
+        servo_axisY.write(servo_pos[1])
     
         cv2.imshow("Face Tracking", img)
         if cv2.waitKey(1) == ord('q'):
