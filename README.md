@@ -1,5 +1,4 @@
 
-
   SISTEMA DE DETECCIÓN DE MOVIMIENTO DE ROSTRO
 
 [![project.jpg](https://i.postimg.cc/SNBFm1tQ/project.jpg)](https://postimg.cc/56Sk3gVD)
