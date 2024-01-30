@@ -11,33 +11,37 @@ DESCRIPCIÓN
 Componentes Principales:
 
 	Detección de Rostro con OpenCV:
-    La utilización de OpenCV para la detección facial implica el uso de una cierta configuración que le dira al algoritmo de visión por computadora, que patron identificar, en este caso un rostro de frente( hay muchas opciones más, las puedes encontrar en la carpeta Recursos), luego, se verifica si se encuentra el rostro. Como futuras mejoras, se podria utilizar modelos de aprendizaje profundo que entregan una mayor precisión, y mayor flexibilidad para sus requerimientos.
+    Se utiliza OpenCV para la detección facial, este hace uso de algoritmos de visión por computadora que identifican patrones característicos de un rostro.
 
-    Interfaz con PyFirmata:
-        PyFirmata es una biblioteca de Python que facilita la comunicación con placas Arduino mediante el protocolo Firmata.
-        La interfaz permite enviar comandos desde Python al Arduino, estableciendo una conexión efectiva entre el software de visión por computadora y el hardware de control del robot.
+  Interfaz con PyFirmata:
+  	PyFirmata es una biblioteca de Python que facilita la comunicación con placas Arduino mediante el protocolo Firmata. La podras encontrar en Recursos.
+  La interfaz permite enviar comandos desde Python al Arduino, estableciendo una conexión efectiva entre el software de visión por computadora y el hardware de control del robot.
+		Para poder utilizar PyFirmata correctamente, se debe subir un software de configuracion al Arduino, que sera accesible en ejemplos > StandardFirmata al instalar la libreria.
+  
+	Control de Movimientos con Arduino:
+  	El Arduino actúa como intermediario entre el robot y el programa de deteccion de rostro, recibiendo datos del programa y con el uso de pyfirmata, se traduce y se envian los          valores correpondientes al robot.
 
-    Control de Movimientos con Arduino:
-        El Arduino actúa como el cerebro del sistema, recibiendo datos de Python y traduciéndolos en comandos para los servomotores.
-        La programación del Arduino debe incluir la lógica necesaria para interpretar las señales y controlar los servomotores de manera precisa.
-
-    Servomotores SG90:
-        Estos servomotores son utilizados para controlar los movimientos mecánicos del robot.
-        Son ligeros y eficientes, ideales para aplicaciones de bajo peso como un robot de seguimiento facial.
-
-    Mecánica del Robot:
-        Descripción de la estructura mecánica del robot que aloja los servomotores. Esto podría incluir detalles sobre cómo se implementó el sistema de seguimiento facial en términos de conexión mecánica entre los servomotores y las partes móviles del robot.
+  Servomotores SG90:
+  	Estos servomotores son utilizados para controlar los movimientos mecánicos del robot tanto la rotacion del robot con respecto a la base, como el movimiento hacia arriba y hacia      abajo de la parte superior. Son ligeros, eficientes, economicos y muy accesibles, caracteristicas ideales para aplicaciones de bajo peso como un robot de seguimiento facial.
+	 	A pesar de las ventajas de estos servos, como futuras mejoras desearía utilizar motores paso a paso, o incluso agregar motores para transformar este pequeño proyecto en un brazo     robotico.
 
 FUNCIONAMIENTO
 
-Deteccion de rostro : El programa utiliza OpenCV para identificar el rostro, en el que se puede usar distintas configuraciones, el utilizado en este programa y más se encuentran en Recursos. Dependiendo de la configuracion elegida(en este caso, un rostro de frente), se buscara en la imágen, esta se puede obtener a través de una cámara, o en un video pregrabado, si se encuentra el rostr
+	Deteccion de rostro : 
+ 		La utilización de OpenCV para la detección facial implica el uso de una cierta configuración que le dira al algoritmo de deteccion de rostro, que patron identificar, en este         caso un rostro de frente(hay muchas opciones más, las puedes encontrar en la carpeta Recursos), luego se verifica si se encuentra el rostro. Como futuras mejoras, pienso en            utilizar modelos de aprendizaje profundo que entregan una mayor precisión, y mayor flexibilidad para mis requerimientos.
 
-Conexión con arduino: Se hace uso del módulo pyfirmata. En primer lugar se debe subir el código de configuración de pyfirmata en arduino, que lo encontrarás en la librería de arduino ide, luego, se configura el puerto y pines que se utilizaran en el programa.
+	Conexión con arduino: 
+		Se hace uso del módulo pyfirmata. En primer lugar se debe subir el código de configuración de pyfirmata en arduino, luego, en el programa se debe elegir el puerto a utilizar y       los pines requeridos.
 
-Ciclo de imágenes: Se hace uso de un ciclo infinito, en la que se divide el video en las imágenes correspondientes, y se detecta el rostro en cada una, luego las coordenadas del rostro en la imágen, se las entrega a los servos a modo de grados.
+	Ciclo de imágenes: Se hace uso de un ciclo infinito, en la que se divide el video en las imágenes correspondientes, y se detecta el rostro en cada una, luego las coordenadas del 				rostro en la imágen, se las entrega a los servos a modo de grados.
 
-MODELOS 3D
+	MODELOS 3D
+		La elección de SolidWorks 2023 es debido a mis conocimientos intermedios en este mismo, ademas de ser una de las herramientas de diseño asistido por computadora (CAD) más            avanzadas y ampliamente utilizadas. Esto asegura la precisión y la eficiencia en el diseño del robot.
 
-Estos modelos fueron diseñados en la plataforma SolidWorks 2023, tanto la parte superior, intermedia e inferior.
+    El diseño consta de tres partes principales: superior, intermedia e inferior. La parte inferior sirve como la base del robot y permite la rotacion. Esta base proporciona 						estabilidad al conjunto del robot. La parte intermedia sive como estructura principal del robot, manteniendo todo en su lugar, y sirviendo como referencia para la parte superior, 			que gracias a un servomotor, permite el movimiento vertical en respuesta a las ordenes del programa
 
-La parte inferior hace de base para girar en el eje X a la parte intermedia con uso de los servos g90, luego el servomotor restante es utilizado para mover la parte superior en el eje Y.
+		Criterios de diseño:
+			Los diseños fueron hechos con la medida standar del sg90, presente en la hoja de datos del mismo, fue construido con una impresora 3D, con base en el material PETG
+
+Conclusiones
+	Mis expectativas del proyecto fueron cumplidas con creces, gracias a la implementacion de OpenCV, logre aprender el funcionamiento de este programa e incluso de Inteligencia Artificial
