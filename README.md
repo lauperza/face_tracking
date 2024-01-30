@@ -4,8 +4,8 @@
 [![project.jpg](https://i.postimg.cc/SNBFm1tQ/project.jpg)](https://postimg.cc/56Sk3gVD)
 
 ## DESCRIPCIÓN
-	El proyecto consiste de diseño y construcción de un robot que utiliza una cámara(o tambien un video) mediante OpenCV para detectar rostros humanos. Esta detección de rostros se traduce en movimientos controlados, que son enviados a través de PyFirmata a un Arduino. Este Arduino, a su vez, gestiona dos servomotores SG90 conectados al robot, permitiéndole seguir los movimientos del rostro detectado.
-
+   El proyecto consiste de diseño y construcción de un robot que utiliza una cámara(o tambien un video) mediante OpenCV para detectar rostros humanos. Esta detección de rostros se traduce en movimientos controlados, que son enviados a través de PyFirmata a un Arduino. Este Arduino, a su vez, gestiona dos servomotores SG90 conectados al robot, permitiéndole seguir los movimientos del rostro detectado.
+   
 ## COMPONENTES PRINCIPALES:
 
 **Detección de Rostro con OpenCV:**
